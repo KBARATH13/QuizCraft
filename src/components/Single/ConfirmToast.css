@@ -1,0 +1,88 @@
+/* Styles for the confirmation toast */
+
+/* Ensure the toast container is a full-screen overlay */
+/* This class is added to the body to scope the overlay styles */
+body.confirm-toast-open .Toastify__toast-container {
+  position: fixed !important; /* Force container to fill the viewport */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex !important; /* Flexbox for centering */
+  align-items: center; /* Vertical center */
+  justify-content: center; /* Horizontal center */
+  pointer-events: auto; /* Allow interaction with the overlay */
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+}
+
+/* We also need to ensure the container itself doesn't block pointer events when not active */
+.Toastify__toast-container {
+  pointer-events: none;
+}
+
+
+/* Override default toast positioning for the specific confirmation toast */
+.Toastify__toast.confirm-toast-center {
+  position: relative !important;
+  transform: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  pointer-events: auto;  /* Re-enable pointer events for the toast itself */
+}
+
+/* Content wrapper for the custom toast */
+.confirm-toast-content {
+   background-color: var(-card-bg-fallback, #fff); /* fallback if CSS vars missing */
+  color: var(--text-color, #000);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow, 0 4px 20px rgba(0,0,0,0.3));
+  border: 1px solid var(--border-color, #ccc);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.confirm-toast-content p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.confirm-toast-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.confirm-toast-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.confirm-btn-yes {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+}
+
+.confirm-btn-yes:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.confirm-btn-no {
+  background-color: var(--danger-color);
+  color: var(--button-text-color);
+}
+
+.confirm-btn-no:hover {
+  background-color: var(--danger-hover);
+  transform: translateY(-2px);
+}

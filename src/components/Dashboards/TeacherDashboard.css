@@ -1,0 +1,299 @@
+/* Styles specific to TeacherDashboard.js */
+
+.classroom-dashboard {
+  padding: 2.5rem;
+  max-width: 900px;
+  margin: 2.5rem auto;
+  background-color: var(--background-color-alt);
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.classroom-dashboard h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.dashboard-content {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Aligns columns to the top */
+}
+
+.dashboard-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.create-classroom-form {
+  background-color: var(--card-bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.create-classroom-form h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.create-classroom-form form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.create-classroom-form input {
+  flex-grow: 1;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+}
+
+.create-classroom-form .btn {
+  flex-shrink: 0;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-classroom-form .btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.classroom-list-container h3 {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-top: 0; /* Added to remove default margin */
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.classroom-list-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.classroom-grid-scrollable {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  height: 240px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.classroom-grid-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.classroom-item-summary {
+  background-color: var(--card-bg-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  height: 220px;
+  margin: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.classroom-item-summary:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.classroom-item-summary h4 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.class-code-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--input-bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.class-code-wrapper p {
+  margin: 0;
+  color: var(--text-color-alt);
+}
+
+.class-code-wrapper code {
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.copy-code-btn {
+  background: transparent;
+  border: none;
+  color: var(--subtle-text-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.copy-code-btn:hover {
+  color: var(--primary-color);
+  background-color: rgba(0,0,0,0.1);
+}
+
+.classroom-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.view-details-btn, .delete-classroom-btn {
+  flex-grow: 1;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.view-details-btn {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: 1px solid var(--primary-color);
+}
+
+.view-details-btn:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.delete-classroom-btn {
+  background-color: transparent;
+  color: var(--error-color);
+  border: 1px solid var(--error-color);
+}
+
+.delete-classroom-btn:hover {
+  background-color: var(--error-color);
+  color: var(--button-text-color);
+  transform: translateY(-2px);
+}
+
+.create-quiz-btn {
+  display: inline-flex; /* Changed to inline-flex */
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.create-quiz-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Dot Scroller Styles */
+.dot-scroller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.scroll-arrow {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scroll-arrow:hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border-color: var(--primary-color);
+}
+
+.scroll-arrow:disabled {
+  color: var(--border-color);
+  cursor: not-allowed;
+}
+
+.dots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: var(--primary-hover);
+}
+
+.dot.active {
+  background-color: var(--primary-color);
+  transform: scale(1.2);
+}

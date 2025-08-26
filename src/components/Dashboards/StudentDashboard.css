@@ -1,0 +1,242 @@
+.student-dashboard-container {
+  background-color: var(--card-bg-color);
+  padding: 2rem;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 2rem auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header h2 {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.join-classroom-section {
+  padding: 2rem;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2.5rem;
+}
+
+.join-classroom-section h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.join-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.class-code-input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.join-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.my-classrooms-section {
+  flex-grow: 1;
+}
+
+.my-classrooms-section h3 {
+  color: var(--text-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.classroom-list-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.classrooms-grid-scrollable {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  height: 380px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  /* Hide scrollbar */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.classrooms-grid-scrollable::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.classroom-card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0;
+  width: auto;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  scroll-snap-align: start;
+  margin: 5px;
+}
+
+.classroom-header-card {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.classroom-header-card h4 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.teacher-name {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: var(--text-color-alt);
+  margin: 0;
+}
+
+.quizzes-list {
+  padding: 0 1.5rem;
+  flex-grow: 1;
+}
+
+.quizzes-list h5 {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.quiz-scroll-container {
+  max-height: 100px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quizzes-list li {
+  font-size: 1rem;
+  color: var(--text-color-alt);
+  padding: 0.25rem 0;
+}
+
+.view-quizzes-btn {
+  display: block;
+  margin: 1.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.view-quizzes-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.no-classrooms-message {
+  color: var(--text-color-alt);
+  font-style: italic;
+}
+
+.error-message {
+  color: var(--danger-color);
+  margin-top: 1rem;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+}
+
+/* Dot Scroller Styles */
+.dot-scroller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.scroll-arrow {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scroll-arrow:hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border-color: var(--primary-color);
+}
+
+.scroll-arrow:disabled {
+  color: var(--border-color);
+  cursor: not-allowed;
+}
+
+.dots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: var(--primary-hover);
+}
+
+.dot.active {
+  background-color: var(--primary-color);
+  transform: scale(1.2);
+}

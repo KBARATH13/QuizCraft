@@ -1,0 +1,102 @@
+.all-badges-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.all-badges-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.badge-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: var(--card-bg-color);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.badge-section h3 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.badge-section p {
+    font-size: 1rem;
+    color: var(--text-color-alt);
+    margin-bottom: 20px;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.badge-display-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.badge-display-item.locked {
+  background-color: var(--locked-badge-bg);
+  color: var(--locked-badge-text);
+}
+
+.badge-display-item.unlocked {
+  background: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  cursor: help;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.badge-display-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--box-shadow-hover);
+}
+
+.badge-display-item i {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.badge-display-item.unlocked i {
+    color: var(--accent-color);
+}
+
+.badge-display-name {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.badge-lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-bg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 10px;
+}

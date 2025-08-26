@@ -1,0 +1,256 @@
+.quiz-take-container {
+  padding: 2rem 1rem;
+}
+
+.quiz-take-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quiz-question {
+  background: var(--card-bg-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.quiz-options ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.quiz-options button {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: var(--option-button-bg);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-options button:hover {
+  border-color: var(--primary-hover);
+  background-color: var(--option-button-hover-bg);
+}
+
+.quiz-options button.selected {
+  border-color: var(--primary-hover);
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  font-weight: 600;
+  transform: scale(1.02);
+}
+
+.quiz-navigation {
+  display: flex;
+  justify-content: center; /* Changed to center */
+  gap: 1rem; /* Add a gap between buttons */
+  margin-top: 2rem;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+/* Doubt Modal Styles */
+.doubt-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.doubt-modal {
+  background-color: var(--background-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+  color: var(--text-color);
+}
+
+.doubt-modal h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.doubt-modal p {
+  margin-bottom: 1rem;
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+.doubt-response {
+  background: var(--card-bg-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  min-height: 100px; /* Ensure some visible area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid var(--border-color);
+}
+
+.doubt-modal button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.btn-doubt {
+  margin-top: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-doubt:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.doubt-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.doubt-modal-close:hover {
+  color: var(--primary-color);
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.doubt-modal-content {
+  margin-top: 1rem;
+}
+
+.doubt-modal-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.doubt-modal-content strong {
+  color: var(--primary-color);
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.doubt-modal-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.doubt-modal-content li {
+  margin-bottom: 0.5rem;
+}
+
+.doubt-modal-content code {
+  background-color: var(--card-bg-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.doubt-modal-content pre {
+  background-color: var(--card-bg-color);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.doubt-modal-content h4 {
+  color: var(--primary-color);
+  margin-top: 1.5rem;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.doubt-modal-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.doubt-modal-content a:hover {
+  text-decoration: underline;
+}
+
+.quiz-timer {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.attempts-left {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.quiz-options button.correct {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.quiz-progress-container {
+  width: 100%;
+  background-color: var(--border-color);
+  border-radius: 5px;
+  height: 10px;
+  margin-bottom: 1.5rem;
+  overflow: hidden; /* Ensures the inner bar stays within bounds */
+}
+
+.quiz-progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out; /* Smooth transition for width changes */
+}

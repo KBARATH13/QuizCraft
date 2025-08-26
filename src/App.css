@@ -1,0 +1,148 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* --- Forms (Login, Register, Create Quiz) --- */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.form-container input, .form-container select {
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    transition: border 0.3s, background 0.3s;
+}
+
+.form-container input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.form-container input:focus, .form-container select:focus {
+    border-color: var(--primary-hover);
+    background-color: var(--input-focus-bg);
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+.full-width-main {
+    max-width: none; /* Remove max-width */
+    margin: 0; /* Remove auto margins */
+    padding: 20px; /* Keep padding */
+  }
+  
+  /* Responsive Grid */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Responsive Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--button-shadow);
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--button-text-color);
+}
+
+/* React Toastify Custom Styles */
+.Toastify__toast-container {
+  /* Adjust container position if needed */
+}
+
+.Toastify__toast {
+  background-color: var(--card-bg-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.Toastify__toast--info {
+  background-color: var(--primary-color) !important;
+  color: var(--button-text-color) !important;
+}
+
+.Toastify__toast--success {
+  background-color: var(--success-color) !important;
+  color: var(--button-text-color) !important;
+}
+
+.Toastify__toast--warning {
+  background-color: var(--warning-color) !important;
+  color: var(--button-text-color) !important;
+}
+
+.Toastify__toast--error {
+  background-color: var(--error-color) !important;
+  color: var(--button-text-color) !important;
+}

@@ -1,0 +1,63 @@
+.auth-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between profile pic and logout button */
+}
+
+.nav-profile-pic {
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+/* Media queries for AuthButtons responsiveness */
+
+/* Tablets and smaller devices (general adjustments) */
+@media (max-width: 768px) {
+    .auth-buttons-container {
+        gap: 0.8rem; /* Reduce gap */
+    }
+
+    .nav-profile-pic {
+        width: 50px; /* Smaller size */
+        height: 50px; /* Smaller size */
+    }
+}
+
+/* Landscape Smartphones and Small Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .auth-buttons-container {
+        gap: 0.7rem; /* Fine-tune gap for this range */
+    }
+
+    .nav-profile-pic {
+        width: 45px; /* Fine-tune size for this range */
+        height: 45px; /* Fine-tune size for this range */
+    }
+}
+
+/* Portrait Smartphones */
+@media (max-width: 480px) {
+    .auth-buttons-container {
+        gap: 0.5rem; /* Further reduce gap */
+    }
+
+    .nav-profile-pic {
+        width: 40px; /* Even smaller size */
+        height: 40px; /* Even smaller size */
+    }
+}

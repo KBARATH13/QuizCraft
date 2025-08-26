@@ -1,0 +1,15 @@
+.footer {
+    background: var(--footer-bg);
+    color: var(--subtle-text-color);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */

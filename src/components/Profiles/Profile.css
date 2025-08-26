@@ -1,0 +1,286 @@
+.profile-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .profile-top-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-card {
+    background: var(--card-bg-color);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .profile-details-card {
+    display: flex;
+    flex-direction: column; /* Changed to column to stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 1.5rem;
+  }
+  
+  .profile-picture-container {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+  }
+  
+  .plus-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .profile-details {
+    text-align: center; /* Center text within details */
+    width: 100%; /* Make it take full width */
+  }
+
+  .profile-details p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+  }
+  
+  .gamification-card h3 {
+    margin-top: 0;
+    color: var(--text-color);
+  }
+  
+  .gamification-details p {
+    margin: 0.5rem 0;
+    color: var(--subtle-text-color);
+  }
+  
+  .xp-progress-bar-container {
+    background-color: var(--border-color);
+    border-radius: 10px;
+    height: 10px;
+    margin: 1rem 0;
+  }
+  
+  .xp-progress-bar {
+    background-color: var(--primary-color);
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  .leaderboard-link {
+    /* Button-like styling */
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline for link */
+    display: inline-block; /* Allow padding and margin to work */
+    margin-top: 1rem; /* Add margin to separate from details */
+  }
+  
+  .leaderboard-link:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--box-shadow-hover);
+  }
+  
+  .quiz-history-card h3 {
+    color: var(--text-color);
+  }
+  
+  .quiz-history-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .quiz-history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--subtle-text-color);
+  }
+  
+  .featured-badges-section {
+    margin-top: 1.5rem;
+  }
+  
+  .featured-badges-section h4 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .displayed-badges-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .badge.empty-badge {
+    background-color: var(--border-color);
+    border: 2px dashed var(--subtle-text-color);
+  }
+  
+  .edit-badges-btn, .view-badges-btn {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .edit-badges-btn:hover, .view-badges-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--box-shadow-hover);
+  }
+  
+  .profile-badges-section {
+    margin-top: 1rem;
+  }
+
+  /* Removed body.dark-mode specific overrides as variables should handle them */
+
+.location-details {
+    margin-top: 15px;
+}
+
+.location-edit-form {
+    margin-top: 10px;
+}
+
+.location-edit-form input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+}
+
+.friend-management-card {
+    margin-top: 20px;
+}
+
+.friend-requests ul,
+.friends-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.friend-requests li,
+.friends-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.add-friend input {
+    width: calc(100% - 80px);
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+}
+
+.add-friend button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.location-not-set {
+    color: var(--danger-color, #dc3545); /* Red color to draw attention */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.location-edit-form button {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Space between buttons */
+}
+
+.location-edit-form button:hover {
+    background-color: var(--primary-hover);
+}
+
+.location-edit-form button:last-child {
+    margin-right: 0; /* No margin for the last button */
+}
+
+.location-select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none; /* Remove default system styling for dropdowns */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20fill%3D%22%237E5C4A%22%20d%3D%22M208.5%2096.5L128%20177l-80.5-80.5c-4.7-4.7-12.3-4.7-17%200s-4.7%2012.3%200%2017l89%2089c4.7%204.7%2012.3%204.7%2017%200l89-89c4.7-4.7%204.7-12.3%200-17s-12.3-4.7-17%200z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+.location-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+}

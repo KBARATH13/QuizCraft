@@ -1,0 +1,103 @@
+.featured-badges {
+    margin-top: 2rem;
+    text-align: center; /* Center the heading */
+    width: 100%; /* Ensure it takes full width */
+}
+
+.featured-badges h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjust minmax as needed */
+    gap: 1rem;
+    justify-content: center; /* Center the grid items */
+    max-width: 400px; /* Limit width of the grid for better appearance */
+    margin: 0 auto; /* Center the grid itself */
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-color); /* Use a subtle background */
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.badge-item img {
+    width: 60px; /* Size of badge image */
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.badge-item p {
+    font-size: 0.8em;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.remove-friend-btn {
+    /* Inherit common button styles from other buttons if possible, or define them */
+    background-color: var(--danger-color, #dc3545); /* Red color for danger/remove, with fallback */
+    color: var(--button-text-color, white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 1rem; /* Add some space from elements above */
+    /* Ensure it's a block element if it needs to take full width, or inline-block if it should sit next to others */
+    display: inline-block; /* Default for buttons, adjust if needed */
+}
+
+.remove-friend-btn:hover {
+    background-color: var(--danger-hover-color, #c82333); /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--box-shadow-hover, rgba(0, 0, 0, 0.2));
+}
+
+.add-friend-btn {
+    background-color: var(--primary-color); /* Primary color for positive action */
+    color: var(--button-text-color, white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 1rem; /* Add some space from elements above */
+    display: inline-block;
+}
+
+.add-friend-btn:hover {
+    background-color: var(--primary-hover, #5a4236); /* Darker primary on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--box-shadow-hover, rgba(0, 0, 0, 0.2));
+}
+
+.chat-friend-btn {
+    background-color: var(--accent-color, #28a745); /* Green for chat, with fallback */
+    color: var(--button-text-color, white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    margin-left: 10px; /* Space from other buttons */
+    display: inline-block;
+}
+
+.chat-friend-btn:hover {
+    background-color: var(--accent-hover-color, #218838); /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--box-shadow-hover, rgba(0, 0, 0, 0.2));
+}

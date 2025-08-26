@@ -1,0 +1,256 @@
+.app-header {
+  background: var(--header-bg);
+  box-shadow: none;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 2rem; /* Adjusted padding */
+  min-height: 60px; /* Set a minimum height */
+  display: flex; /* Use flexbox for vertical centering */
+  align-items: center; /* Vertically center content */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.logo-auth-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 3rem; /* This was changed by me earlier */
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--subtle-text-color);
+  font-weight: 500;
+  transition: color 0.2s ease-in-out, transform 0.2s ease;
+  padding: 0;
+  position: relative;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color); 
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-item a:hover {
+    color: var(--primary-color); 
+}
+
+.nav-item a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.btn-logout {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--header-bg);
+  padding: 0.5rem 1rem 0.5rem 30px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  margin-left: 15px;
+  justify-content: center;
+}
+
+.btn-friends {
+    background: transparent;
+    border-color:var(--primary-color); /* Adjusted border for better visibility */
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-friends:hover {
+    color: var(--primary-color-dark);
+}
+
+ 
+
+.header-action-buttons {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.notification-badge {
+  background-color: #FF0000; /* Changed to red */
+  border-radius: 50%;
+  width: 10px; /* Size of the dot */
+  height: 10px; /* Size of the dot */
+  position: absolute;
+  top: -2px; /* Adjust position */
+  right: -2px; /* Adjust position */
+  box-shadow: 0 0 0 2px var(--header-bg); /* A small ring around the dot */
+  z-index: 1;
+  /* Removed text-related styles */
+}
+
+.btn-chat {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem; /* Adjusted padding for icon */
+    border-radius: 5px;
+    cursor: pointer;
+    font-siez: 1.5rem;
+    display: flex; /* To center the icon */
+    align-items: flex-start; /* To center the icon */
+    justify-content: center; /* To center the icon */
+    position: relative; /* Ensure this is explicitly set */
+}
+
+.btn-chat:hover {
+    background: var(--primary-color);
+    color: var(--header-bg);
+}
+
+/* Media queries for Header responsiveness */
+
+/* Tablets and smaller devices (general adjustments) */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 0.5rem 1rem;
+        min-height: 50px;
+    }
+
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .nav-list {
+        gap: 1rem;
+    }
+
+    .nav-item a {
+        font-size: 0.9rem;
+    }
+
+    .btn-logout,
+    .btn-friends,
+    .btn-chat {
+        padding: 0.4rem 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .btn-logout {
+        padding-left: 25px;
+        margin-left: 10px;
+    }
+
+    .notification-badge {
+        width: 8px;
+        height: 8px;
+        top: -1px;
+        right: -1px;
+    }
+}
+
+/* Landscape Smartphones and Small Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .app-header {
+        padding: 0.4rem 0.8rem;
+        min-height: 48px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .nav-list {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-logout,
+    .btn-friends,
+    .btn-chat {
+        padding: 0.35rem 0.7rem;
+        font-size: 1.1rem;
+    }
+
+    .btn-logout {
+        padding-left: 22px;
+        margin-left: 8px;
+    }
+}
+
+
+/* Portrait Smartphones */
+@media (max-width: 480px) {
+    .app-header {
+        padding: 0.4rem 0.8rem;
+        min-height: 45px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .header-action-buttons {
+        gap: 5px;
+    }
+
+    .btn-logout,
+    .btn-friends,
+    .btn-chat {
+        padding: 0.3rem 0.6rem;
+        font-size: 1rem;
+    }
+
+    .btn-logout {
+        padding-left: 20px;
+        margin-left: 5px;
+    }
+
+    .notification-badge {
+        width: 7px;
+        height: 7px;
+        top: 0px;
+        right: 0px;
+    }
+}

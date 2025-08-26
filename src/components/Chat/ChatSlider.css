@@ -1,0 +1,122 @@
+/* Chat Slider Trigger Button */
+.chat-slider-trigger {
+  position: fixed;
+  top: 50%; /* Adjust based on header height */
+  left: 0;
+  transform: translateY(-50%);
+  background-color: var(--primary-color); /* Themed color */
+  color: var(--button-text-color); /* Themed color */
+  padding: 12px 8px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  z-index: 1000;
+  transition: left 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.chat-slider-trigger:hover {
+  background-color: var(--primary-hover); /* Themed hover color */
+  transform: translateY(-50%) scale(1.05);
+}
+
+.chat-slider-trigger.open {
+  left: 360px; /* Width of the panel */
+  border-radius: 8px 0 0 8px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat Slider Panel */
+.chat-slider-panel {
+  position: fixed;
+  top: 150px; /* Adjust based on actual header height */
+  bottom: 0;
+  left: 0;
+  width: 360px; /* Smartphone screen size */
+  background-color: var(--card-bg-color); /* Themed background */
+  border-right: 1px solid var(--border-color); /* Themed border */
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+  transform: translateX(-100%); /* Hidden by default */
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth animation */
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  /* Futuristic elements */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(var(--card-bg-color-rgb, 255, 255, 255), 0.85); /* Semi-transparent background */
+}
+
+.chat-slider-panel.open {
+  transform: translateX(0); /* Visible */
+}
+
+.chat-slider-header {
+  padding: 15px 20px;
+  background-color: rgba(var(--card-bg-color-rgb, 255, 255, 255), 0.95); /* Slightly less transparent */
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-slider-header h3 {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.chat-slider-header .close-button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: var(--subtle-text-color);
+  transition: color 0.2s ease;
+}
+
+.chat-slider-header .close-button:hover {
+  color: var(--primary-color);
+}
+
+.chat-slider-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px 20px;
+  background-color: var(--chat-bg-color);
+  color: var(--text-color);
+  /* Add a subtle scrollbar style */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--primary-color) transparent; /* Firefox */
+}
+
+.chat-slider-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-slider-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-slider-content::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.chat-slider-trigger .notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--notification-badge-bg, #ff4d4d); /* Red color for notifications */
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7em;
+  font-weight: bold;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}

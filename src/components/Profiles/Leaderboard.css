@@ -1,0 +1,178 @@
+.leaderboard-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+.leaderboard-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+}
+
+.leaderboard-sections {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.leaderboard-sections button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: transparent;
+  color: var(--subtle-text-color);
+  cursor: pointer;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.leaderboard-sections button.active {
+  color: var(--primary-color);
+}
+
+.leaderboard-sections button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.leaderboard-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.leaderboard-tabs button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.leaderboard-tabs button.active, 
+.leaderboard-tabs button:hover {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+}
+
+.leaderboard-item {
+  display: grid;
+  grid-template-columns: 60px 60px 1fr auto auto;
+  gap: 15px;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.leaderboard-item:last-child {
+  border-bottom: none;
+}
+
+.leaderboard-item:hover {
+  background-color: var(--list-item-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.leaderboard-rank {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--rank-color);
+  text-align: center;
+}
+
+.leaderboard-profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+}
+
+.leaderboard-username {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.leaderboard-username svg {
+  margin-left: 8px;
+  color: var(--primary-color);
+}
+
+.leaderboard-points, .leaderboard-level {
+  font-size: 1rem;
+  color: var(--subtle-text-color);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.leaderboard-points {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Top Three Animations */
+.leaderboard-item.top-three {
+  background-color: var(--top-three-bg);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  animation: pulse 1.5s infinite alternate;
+}
+
+.leaderboard-item.top-three .leaderboard-rank {
+  color: var(--top-three-rank-color);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  }
+  100% {
+    transform: scale(1.01);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.error {
+  color: var(--error-color);
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+.no-classrooms-message {
+  text-align: center;
+  color: var(--subtle-text-color);
+  padding: 20px;
+  font-style: italic;
+  font-size: 1.1rem;
+}

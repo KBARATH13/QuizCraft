@@ -1,0 +1,299 @@
+.quiz-create-card {
+  background: var(--card-bg-color);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.quiz-create-card h2, .quiz-create-card h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.generate-quiz-section {
+  background: var(--card-bg-color);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.generate-quiz-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Space between rows */
+}
+
+.generate-quiz-row {
+  display: flex;
+  gap: 1rem; /* Space between items in a row */
+  width: 100%;
+}
+
+.generate-quiz-row-first {
+  display: flex;
+  gap: 1rem; /* Space between items in a row */
+  width: 100%;
+}
+
+.generate-quiz-row input,
+.generate-quiz-row select,
+.generate-quiz-row button,
+.generate-quiz-row-first input,
+.generate-quiz-row-first .pdf-upload-input {
+  flex: 1; /* Distribute space equally */
+}
+
+.pdf-upload-input {
+  padding: 1.2rem 1.1rem !important;
+  background-color: var(--input-bg-color) !important;
+  color: var(--text-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.quiz-questions-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.quiz-questions-wrapper.two-column-layout {
+    display: grid;
+    grid-template-columns: calc(50% - 0.75rem) calc(50% - 0.75rem);
+    gap: 1.5rem;
+}
+
+.quiz-question {
+  padding: 1.2rem 1.1rem !important; 
+  background: var(--card-bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Spacing between elements inside the question card */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.quiz-question input[type="text"] { /* Specific style for question text input */
+  font-weight: 600;
+}
+
+.quiz-question .options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quiz-question .option-input {
+  margin-bottom: 0; /* Remove default margin from global input style */
+}
+
+.quiz-question select {
+  margin-top: 0.5rem;
+}
+
+.quiz-question .btn-remove-question {
+  align-self: flex-end; /* Align remove button to the right */
+  margin-top: 1rem;
+}
+
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--card-bg-fallback);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.modal-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.visibility-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--input-bg-color);
+  border-radius: 8px;
+}
+
+.visibility-actions p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* Form Inputs and Selects */
+.quiz-create-card input[type="text"],
+.quiz-create-card input[type="number"],
+.quiz-create-card select,
+.quiz-create-card input[type="text"].option-input { /* Include option inputs here */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    padding: 1.2rem 1.1rem !important; /* Consistent padding */
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-bg-color) !important; /* Subtle transparent background */
+    color: var(--text-color);
+    transition: border 0.3s, background 0.3s;
+    margin-bottom: 1rem; /* Consistent vertical spacing */
+}
+
+.quiz-create-card input::placeholder {
+    color: var(--subtle-text-color);
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */
+
+.quiz-create-card select option {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+}
+
+/* Specific overrides for generate quiz section inputs - ensure they inherit general styles */
+.generate-quiz-row input,
+.generate-quiz-row select,
+.generate-quiz-row-first input {
+  padding: 1.2rem 1.1rem !important; /* Ensure consistent height */
+  background-color: var(--input-bg-color) !important;
+  color:var(--text-color);
+  border-radius: 8px  ; /* Ensure consistent background */
+}
+
+.quiz-question input[type="text"] { /* Specific style for question text input */
+  font-weight: 600;
+  background-color: var(--input-bg-color) !important; /* Consistent background for question input */
+  padding: 1.2rem 1.1rem !important; /* Consistent padding */
+}
+
+.quiz-question .option-input {
+  margin-bottom: 0; /* Keep this to remove extra margin for options */
+  background-color: var(--input-bg-color) !important; /* Consistent background for option inputs */
+  padding: 1.2rem 1.1rem !important; /* Consistent padding */
+  color: var(--text-color);
+  border-radius: 8px; /* Ensure consistent border radius */
+  font-weight: 100;
+}
+
+.btn-remove-question {
+    margin-top: 1rem;
+    background-color: var(--error-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-remove-question:hover {
+    background-color: var(--error-hover);
+}
+
+.manual-quiz-details-row {
+  display: flex;
+  gap: 1rem; 
+  width: 100%;
+  margin-bottom: 1rem; 
+}
+
+.manual-quiz-details-row input {
+  flex: 1;
+  padding: 1.2rem 1.1rem !important; /* Ensure consistent height */
+  background-color: var(--input-bg-color) !important;
+  color:var(--text-color);
+  border-radius: 8px  ; /* Distribute space equally */
+}
+[type=text]{
+  flex: 1;
+  padding: 1.2rem 1.1rem ; /* Ensure consistent height */
+  background-color: var(--input-bg-color) !important;
+  color:var(--text-color);
+  border-radius: 8px  ;
+  width: 80%;
+
+}
+
+/* Container for the question display/edit area */
+.question-text-container {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Style for the truncated DIV */
+.question-text-truncated {
+  padding: 1.2rem 1.1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: calc(1.2rem * 2 + 1.1em); /* Match the height of the textarea */
+}
+
+/* Style for the placeholder text inside the truncated div */
+.question-text-truncated .placeholder-text {
+    color: var(--subtle-text-color);
+}
+
+/* Style for the TEXTAREA itself */
+.question-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.2rem 1.1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg-color) !important;
+  color: var(--text-color);
+  font-weight: 600;
+  line-height: 1.5;
+  resize: none;
+  overflow: hidden; /* Hide scrollbar for auto-resize effect */
+}
+

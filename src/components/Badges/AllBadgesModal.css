@@ -1,0 +1,147 @@
+/* Modal Overlay */
+.all-badges-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+/* Modal Content */
+.all-badges-modal-content {
+  background: var(--card-bg-color);
+  color: var(--text-color);
+  padding: 20px 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.close-modal-btn:hover {
+  color: var(--primary-color);
+  transform: rotate(90deg);
+}
+
+.all-badges-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+.badge-section {
+  margin-bottom: 30px;
+}
+
+.badge-section h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.badge-section p {
+    font-size: 0.95rem;
+    color: var(--subtle-text-color);
+    margin-bottom: 20px;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 15px;
+}
+
+.badge-display-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid transparent;
+}
+
+.badge-display-item.locked {
+  background-color: var(--disabled-bg-color);
+  color: var(--disabled-text-color);
+}
+
+.badge-display-item.unlocked {
+  background: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  cursor: help;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.badge-display-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow);
+}
+
+.badge-display-item i {
+  font-size: 42px;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.badge-display-item.locked i {
+    color: var(--disabled-text-color);
+}
+
+.badge-display-item.unlocked i {
+    color: var(--primary-color);
+}
+
+.badge-display-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.badge-lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-bg-light);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  border-radius: 10px;
+}
+
+/* Removed [data-theme='dark'] specific overrides as variables should handle them */

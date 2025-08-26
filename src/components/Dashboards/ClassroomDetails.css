@@ -1,0 +1,339 @@
+/* Styles specific to ClassroomDetails.js */
+
+.classroom-item {
+  background-color: var(--card-bg-color); /* Use variable */
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color); /* Use variable */
+  transition: transform 0.2s ease;
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.classroom-item h4 {
+  margin-top: 0;
+  color: var(--primary-color); /* Use variable */
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  flex-basis: 100%; 
+}
+
+.classroom-item p {
+  margin-bottom: 0.5rem;
+  color: var(--text-color-alt); /* Use variable */
+  flex-basis: 100%; 
+}
+
+.student-management {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--border-color-light); /* Use variable */
+  flex-basis: 100%; 
+}
+
+.student-management h5 {
+  color: var(--text-color-alt); /* Use variable */
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.student-management ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.student-management li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border-color-light); /* Use variable */
+  color: var(--text-color); /* Use variable */
+  font-size: 0.95rem;
+}
+
+.student-management li:last-child {
+  border-bottom: none;
+}
+
+.remove-student-btn {
+  padding: 0.4rem 1rem;
+  background-color: var(--danger-color); /* Use variable */
+  color: var(--button-text-color); /* Use variable */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.remove-student-btn:hover {
+  background-color: var(--danger-hover); /* Use variable */
+  transform: translateY(-1px);
+}
+
+.add-student-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.add-student-form input {
+  flex-grow: 1;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color); /* Use variable */
+  border-radius: 6px;
+  background-color: var(--input-bg-color); /* Use variable */
+  color: var(--text-color); /* Use variable */
+  font-size: 0.95rem;
+}
+
+.add-student-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--success-color); /* Use variable */
+  color: var(--button-text-color); /* Use variable */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.add-student-form button:hover {
+  background-color: var(--success-hover); /* Use variable */
+  transform: translateY(-1px);
+}
+
+.quiz-assignment {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--border-color-light); /* Use variable */
+  flex-basis: 100%;
+}
+
+.quiz-assignment h5 {
+  color: var(--text-color-alt); /* Use variable */
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.quiz-assignment ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-assignment li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border-color-light); /* Use variable */
+  color: var(--text-color); /* Use variable */
+  font-size: 0.95rem;
+}
+
+.quiz-assignment li:last-child {
+  border-bottom: none;
+}
+
+.assign-quiz-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.assign-quiz-form select {
+  flex-grow: 1;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color); /* Use variable */
+  border-radius: 6px;
+  background-color: var(--input-bg-color); /* Use variable */
+  color: var(--text-color); /* Use variable */
+  font-size: 0.95rem;
+}
+
+.assign-quiz-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color); /* Use variable */
+  color: var(--button-text-color); /* Use variable */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.assign-quiz-form button:hover {
+  background-color: var(--primary-hover); /* Use variable */
+  transform: translateY(-1px);
+}
+
+/* Table styles for quiz performance */
+.performance-table {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+
+.performance-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.performance-table th,
+.performance-table td {
+  border: 1px solid var(--border-color); /* Use variable */
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.performance-table th {
+  background-color: var(--table-header-bg); /* Use variable */
+  font-weight: 600;
+  color: var(--text-color-alt); /* Use variable */
+}
+
+.performance-table tbody tr:nth-child(even) {
+  background-color: var(--table-row-even-bg); /* Use variable */
+}
+
+.performance-table tbody tr:hover {
+  background-color: var(--table-row-hover-bg); /* Use variable */
+}
+
+/* New styles for ClassroomDetails two-column layout */
+.details-two-column-layout {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.details-column {
+  flex: 1;
+}
+
+.multi-select-dropdown {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  min-height: 120px; /* Make it visible as a list box */
+  overflow-y: auto; /* Add scroll if many options */
+  -webkit-appearance: none; /* Remove default browser styling for consistency */
+  -moz-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-color-alt) 50%),
+                    linear-gradient(135deg, var(--text-color-alt) 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+                       calc(100% - 15px) calc(1em + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.multi-select-dropdown:focus {
+  border-color: var(--primary-color-light);
+  box-shadow: 0 0 0 0.2rem var(--primary-color-shadow);
+  outline: none;
+}
+
+.multi-select-dropdown option {
+  padding: 0.5rem;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+}
+
+.multi-select-dropdown option:checked {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+}
+
+.assigned-quizzes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.assigned-quiz-card {
+  background-color: var(--card-bg-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.assigned-quiz-card h4 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.assigned-quiz-card p {
+  margin: 0;
+  color: var(--text-color-alt);
+  font-size: 0.9rem;
+}
+
+.assigned-quiz-card .remove-student-btn { /* Reusing existing button style */
+  margin-top: 0.5rem;
+  align-self: flex-end; /* Align button to the right */
+}
+
+.assigned-quizzes-section-full-width {
+  width: 100%;
+  margin-top: 2rem; /* Add margin top here instead of on the inner div */
+  display: flex; /* Make it a flex container */
+  gap: 2rem; /* Add gap between columns */
+}
+
+.assigned-quizzes-content-wrapper {
+  flex: 1; /* Make it take up one 'column' of the flex layout */
+  max-width: none; /* Override default max-width */
+  margin: 0; /* Override default margin */
+}
+
+.empty-column {
+  flex: 0; /* Make it take up the second 'column' of the flex layout */
+}
+
+.btn-classroom-chat {
+    background-color: var(--primary-color); /* Use primary color for chat button */
+    color: var(--button-text-color, white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 1rem; /* Add some space */
+    display: inline-block;
+}
+
+.btn-classroom-chat:hover {
+    background-color: var(--primary-hover); /* Darker primary on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--box-shadow-hover, rgba(0, 0, 0, 0.2));
+}
+
+/* Styles for student profile pictures in the list */
+.student-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px; /* Add some space between the pic and the name */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}

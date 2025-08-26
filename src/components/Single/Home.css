@@ -1,0 +1,122 @@
+.hero-section {
+  background: var(--card-bg-color);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.call-to-action-section {
+  text-align: center;
+  margin-top: 1.5rem; /* Reduced margin */
+  padding-top: 1rem; /* Reduced padding */
+  border-top: 1px solid var(--border-color); /* Add a subtle separator */
+}
+
+.call-to-action-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.auth-link-home {
+  color: var(--success-color); /* Light green color */
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin: 0 0.5rem; /* Add some spacing around the links */
+}
+
+.auth-link-home:hover {
+  color: var(--success-hover); /* Darker green on hover */
+}
+
+/* AboutUs.css */
+.about-us-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center; /* Center the main title */
+}
+
+.about-us-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2.5rem;
+    text-shadow: 2px 2px 5px var(--box-shadow-dark);
+}
+
+.about-us-card {
+    background: var(--card-bg-color);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    margin-bottom: 2rem; /* Spacing between cards */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us-card h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.about-us-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--subtle-text-color);
+    margin-bottom: 1rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.features-list li {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--subtle-bg-light);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-list li:hover {
+    background-color: var(--subtle-bg-light-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--box-shadow-dark);
+}
+
+.features-list li .svg-inline--fa {
+    color: var(--primary-color);
+}
+
+/* Removed body.dark-mode specific overrides as variables should handle them */

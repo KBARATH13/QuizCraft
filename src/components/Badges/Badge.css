@@ -1,0 +1,39 @@
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--badge-bg);
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+}
+
+.edit-badges-btn {
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.edit-badges-btn:hover {
+  background-color: var(--primary-hover);
+}

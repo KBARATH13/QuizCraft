@@ -1,0 +1,98 @@
+.auth-form {
+  position: relative; /* Added for positioning context of absolute children */
+  width: 100%;
+  max-width: 420px;
+  padding: 3rem;
+  background: var(--card-bg-color);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.auth-form h2 {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group svg:not(.password-toggle) {
+  position: absolute;
+  left: 15px;
+  color: var(--subtle-text-color);
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem; /* Add padding for icon */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg-color); /* Keep this for input background */
+  color: var(--text-color);
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: var(--subtle-text-color);
+}
+
+.password-toggle svg {
+  color: var(--subtle-text-color);
+}
+
+ 
+.auth-switch-link {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.auth-switch-link span {
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-switch-link span:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 5px; /* Adjusted to be closer */
+  right: 5px; /* Adjusted to be closer */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.modal-close-button:hover {
+  color: var(--primary-color);
+}

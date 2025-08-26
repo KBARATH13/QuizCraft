@@ -1,0 +1,10 @@
+body {
+    font-family: var(--font-family);
+    background: var(--background-color); /* Fallback BG */
+    background-image: var(--background-gradient);
+    background-attachment: fixed; /* Keep gradient in place on scroll */
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
